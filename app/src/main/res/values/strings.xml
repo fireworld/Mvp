@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Mvp</string>
+    <string name="username">Username:</string>
+    <string name="password">Password:</string>
+    <string name="input_your_name">input your name</string>
+    <string name="input_your_password">input your password</string>
+    <string name="submit">Submit</string>
+    <string name="to_demo_activity">to demo activity</string>
+    <string name="to_demo_fragment">to demo fragment</string>
+    <string name="show_demo_dialog_fragment">show demo dialog fragment</string>
+</resources>
