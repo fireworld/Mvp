@@ -1,4 +1,4 @@
-package cc.iceworld.mvp.demo;
+package cc.iceworld.mvp.view.fragment;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -14,8 +14,8 @@ import android.widget.TextView;
 import cc.iceworld.mvp.R;
 import cc.iceworld.mvp.api.IDemo;
 import cc.iceworld.mvp.bean.User;
+import cc.iceworld.mvp.presenter.DemoPresenter;
 import cc.iceworld.mvp.toolbox.FakeLayoutInflater;
-import cc.iceworld.mvp.view.fragment.BaseFragment;
 
 
 /**

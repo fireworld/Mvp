@@ -1,4 +1,4 @@
-package cc.iceworld.mvp.demo;
+package cc.iceworld.mvp.presenter;
 
 import android.support.annotation.NonNull;
 
@@ -6,9 +6,8 @@ import cc.iceworld.mvp.api.IDemo;
 import cc.iceworld.mvp.api.ILoginModel;
 import cc.iceworld.mvp.bean.User;
 import cc.iceworld.mvp.model.LoginModel;
-import cc.iceworld.mvp.net.WeakCallback;
-import cc.iceworld.mvp.presenter.BasePresenter;
 import cc.iceworld.mvp.toolbox.TextTools;
+import cc.iceworld.mvp.toolbox.net.WeakCallback;
 
 
 /**

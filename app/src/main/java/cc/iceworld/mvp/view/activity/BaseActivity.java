@@ -89,6 +89,6 @@ public abstract class BaseActivity<P extends IBase.Presenter> extends Activity i
 
     @Override
     public void toast(@StringRes int resId) {
-        Toast.makeText(this, resId, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), resId, Toast.LENGTH_SHORT).show();
     }
 }

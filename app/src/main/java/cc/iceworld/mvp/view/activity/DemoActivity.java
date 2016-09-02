@@ -1,11 +1,10 @@
-package cc.iceworld.mvp.demo;
+package cc.iceworld.mvp.view.activity;
 
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TableLayout;
@@ -14,37 +13,29 @@ import android.widget.TextView;
 import cc.iceworld.mvp.R;
 import cc.iceworld.mvp.api.IDemo;
 import cc.iceworld.mvp.bean.User;
-import cc.iceworld.mvp.toolbox.FakeLayoutInflater;
-import cc.iceworld.mvp.view.dialog.BaseDialogFragment;
+import cc.iceworld.mvp.presenter.DemoPresenter;
 
-
-/**
- * Created by cxx on 16-6-27.
- * xx.ch@outlook.com
- */
-public class DemoDialogFragment extends BaseDialogFragment<IDemo.Presenter> implements IDemo.View {
+public class DemoActivity extends BaseActivity<IDemo.Presenter> implements IDemo.View {
     private TableLayout mRootTl;
     private TextView mLoginResultTv;
     private EditText mUsernameEt;
     private EditText mPasswordEt;
     private Button mSubmitBtn;
 
-
     @Override
-    protected View initView(@NonNull FakeLayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.view_demo, container);
-        mRootTl = (TableLayout) view.findViewById(R.id.tl_root);
-        mLoginResultTv = (TextView) view.findViewById(R.id.tv_login_result);
-        mUsernameEt = (EditText) view.findViewById(R.id.et_username);
-        mPasswordEt = (EditText) view.findViewById(R.id.et_password);
-        mSubmitBtn = (Button) view.findViewById(R.id.btn_submit);
+    protected void initView(@Nullable Bundle savedInstanceState) {
+        setContentView(R.layout.view_demo);
+        mRootTl = (TableLayout) findViewById(R.id.tl_root);
+        mLoginResultTv = (TextView) findViewById(R.id.tv_login_result);
+        mUsernameEt = (EditText) findViewById(R.id.et_username);
+        mPasswordEt = (EditText) findViewById(R.id.et_password);
+        mSubmitBtn = (Button) findViewById(R.id.btn_submit);
         mSubmitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mPresenter.toLogin();
             }
         });
-        return view;
     }
 
     @Override

@@ -5,7 +5,7 @@ import android.os.SystemClock;
 
 import cc.iceworld.mvp.api.ILoginModel;
 import cc.iceworld.mvp.bean.User;
-import cc.iceworld.mvp.net.Callback;
+import cc.iceworld.mvp.toolbox.net.Callback;
 
 
 /**
@@ -26,7 +26,7 @@ public class LoginModel implements ILoginModel {
             @Override
             protected Boolean doInBackground(String... strings) {
                 SystemClock.sleep(1500);
-                return (USER_NAME.equals(strings[0]) && USER_PASSWORD.equals(strings[1]));
+                return USER_NAME.equals(strings[0]) && USER_PASSWORD.equals(strings[1]);
             }
 
             @Override
